@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.App", "BusinessLogic.App\BusinessLogic.App.csproj", "{9E25CF5D-5176-432A-BBFF-291A1610C03A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.NUnit.Tests", "BusinessLogic.NUnit.Tests\BusinessLogic.NUnit.Tests.csproj", "{3B7268B0-1088-4EBA-8838-F1379A91F8B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic.NUnit.Tests", "BusinessLogic.NUnit.Tests\BusinessLogic.NUnit.Tests.csproj", "{3B7268B0-1088-4EBA-8838-F1379A91F8B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F8D8B3DD-393A-4E4D-B969-82F945B0EE76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D8D22213-C43C-49A2-9983-F1E250A0FE7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E25CF5D-5176-432A-BBFF-291A1610C03A} = {F8D8B3DD-393A-4E4D-B969-82F945B0EE76}
+		{3B7268B0-1088-4EBA-8838-F1379A91F8B2} = {D8D22213-C43C-49A2-9983-F1E250A0FE7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59A102FE-0C97-4EA1-A7ED-5723603B2BDA}
