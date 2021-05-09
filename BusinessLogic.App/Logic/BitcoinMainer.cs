@@ -7,7 +7,6 @@ namespace BusinessLogic.App.Logic
     /// </summary>
     public class BitcoinMainer
     {
-
         /// <summary>
         /// Свойство, которое хранит результат последнего обращения к методу валидации
         /// </summary>
@@ -21,23 +20,13 @@ namespace BusinessLogic.App.Logic
         {
             this.WasLastCoinNameValid = false;
 
-            if (string.IsNullOrEmpty(coinName))
-            {
-                throw new ArgumentException("имя валюты долэно быть задано");
-            }
+            FileExtensionManager manager = new FileExtensionManager();
 
-            if ( !coinName
-                    .EndsWith(".Valuta", StringComparison.CurrentCultureIgnoreCase )
-               )
+            var result = manager.IsValid(coinName);
 
-            {
-                return false;
-            }
+            this.WasLastCoinNameValid = manager.IsValid(coinName);
 
-            this.WasLastCoinNameValid = true;
-
-            return true;
-
+            return this.WasLastCoinNameValid;
         }
     }
 }

@@ -5,9 +5,9 @@ using System;
 namespace BusinessLogic.NUnit.Tests
 {
     [TestFixture]
+    [Category("BitcoinMainerTests")]
     class BitcoinMainerTests
     {
-
         /// <summary>
         /// Фабричный метод для создания экземпляра тестируемого класса
         /// </summary>
@@ -56,6 +56,9 @@ namespace BusinessLogic.NUnit.Tests
         public void IsValidCoinName_WhenCalled_ChangesWasLastCoinNameValid(string coinName, bool expected)
         {
             BitcoinMainer testMainer = MakeTestMainer();
+            testMainer.IsValidCoinName(coinName);
+            
+            Assert.AreEqual(expected, testMainer.WasLastCoinNameValid);
         }
     }
 }
